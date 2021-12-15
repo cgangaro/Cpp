@@ -1,13 +1,12 @@
-NAME			=		Moar_Brainz!
+NAME			=		Karen-filter
 
-HEADER			=		zombie.hpp
+HEADER			=		Karen.hpp
 
 CC				=		@clang++
 
 CFLAGS			=		-Wall -Wextra -Werror
 
-SRCS			=		zombie.cpp \
-						zombiehorde.cpp \
+SRCS			=		Karen.cpp \
 						main.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
@@ -17,17 +16,17 @@ all				:		$(NAME)
 
 $(NAME)		: $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -I $(HEADER) -o $(NAME)
-		@echo "\033[34m[Moar_Brainz!] Compiled\033[0m"
+		@echo "\033[34m[Karen-filter] Compiled\033[0m"
 
 %.o: %.cpp $(HEADER)
 		$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
 
 clean		:
-		@echo "\033[32m[Moar_Brainz!] Clean\033[0m"
+		@echo "\033[32m[Karen-filter] Clean\033[0m"
 		@rm -f $(OBJS)
 
 fclean		:
-		@echo "\033[32m[Moar_Brainz!] Clean\033[0m"
+		@echo "\033[32m[Karen-filter] Clean\033[0m"
 		@rm -f $(OBJS)
 		@rm -f $(NAME)
 

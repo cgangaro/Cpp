@@ -1,4 +1,4 @@
-#include "zombie.class.hpp"
+#include "zombie.hpp"
 
 int main(void)
 {

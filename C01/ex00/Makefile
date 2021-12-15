@@ -1,14 +1,14 @@
 NAME			=		BraiiiiiiinnnnzzzZ
 
-HEADER			=		zombie.class.hpp
+HEADER			=		zombie.hpp
 
 CC				=		@clang++
 
 CFLAGS			=		-Wall -Wextra -Werror
 
-SRCS			=		zombie.class.cpp \
-						newzombie.class.cpp \
-						randomchump.class.cpp \
+SRCS			=		zombie.cpp \
+						newzombie.cpp \
+						randomchump.cpp \
 						main.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)

@@ -1,14 +1,12 @@
-NAME			=		Moar_Brainz!
+NAME			=		Sed_is_for_losers
 
-HEADER			=		zombie.hpp
+HEADER			=		.
 
 CC				=		@clang++
 
 CFLAGS			=		-Wall -Wextra -Werror
 
-SRCS			=		zombie.cpp \
-						zombiehorde.cpp \
-						main.cpp
+SRCS			=		main.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
 
@@ -17,17 +15,17 @@ all				:		$(NAME)
 
 $(NAME)		: $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -I $(HEADER) -o $(NAME)
-		@echo "\033[34m[Moar_Brainz!] Compiled\033[0m"
+		@echo "\033[34m[Sed_is_for_losers] Compiled\033[0m"
 
 %.o: %.cpp $(HEADER)
 		$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
 
 clean		:
-		@echo "\033[32m[Moar_Brainz!] Clean\033[0m"
+		@echo "\033[32m[Sed_is_for_losers] Clean\033[0m"
 		@rm -f $(OBJS)
 
 fclean		:
-		@echo "\033[32m[Moar_Brainz!] Clean\033[0m"
+		@echo "\033[32m[Sed_is_for_losers] Clean\033[0m"
 		@rm -f $(OBJS)
 		@rm -f $(NAME)
 

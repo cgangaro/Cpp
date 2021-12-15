@@ -1,13 +1,12 @@
-NAME			=		Moar_Brainz!
+NAME			=		Mon_premier_cannon
 
-HEADER			=		zombie.hpp
+HEADER			=		Fixed.hpp
 
 CC				=		@clang++
 
 CFLAGS			=		-Wall -Wextra -Werror
 
-SRCS			=		zombie.cpp \
-						zombiehorde.cpp \
+SRCS			=		Fixed.cpp \
 						main.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
@@ -17,17 +16,17 @@ all				:		$(NAME)
 
 $(NAME)		: $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -I $(HEADER) -o $(NAME)
-		@echo "\033[34m[Moar_Brainz!] Compiled\033[0m"
+		@echo "\033[34m[Mon_premier_cannon] Compiled\033[0m"
 
 %.o: %.cpp $(HEADER)
 		$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
 
 clean		:
-		@echo "\033[32m[Moar_Brainz!] Clean\033[0m"
+		@echo "\033[32m[Mon_premier_cannon] Clean\033[0m"
 		@rm -f $(OBJS)
 
 fclean		:
-		@echo "\033[32m[Moar_Brainz!] Clean\033[0m"
+		@echo "\033[32m[Mon_premier_cannon] Clean\033[0m"
 		@rm -f $(OBJS)
 		@rm -f $(NAME)
 

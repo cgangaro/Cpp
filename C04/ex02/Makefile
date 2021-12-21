@@ -1,4 +1,4 @@
-NAME			=		ex01
+NAME			=		ex02
 
 HEADER			=		Animal.hpp
 
@@ -19,17 +19,17 @@ all				:		$(NAME)
 
 $(NAME)		: $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -I $(HEADER) -o $(NAME)
-		@echo "\033[34m[ex01] Compiled\033[0m"
+		@echo "\033[34m[ex02] Compiled\033[0m"
 
 %.o: %.cpp $(HEADER)
 		$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
 
 clean		:
-		@echo "\033[32m[ex01] Clean\033[0m"
+		@echo "\033[32m[ex02] Clean\033[0m"
 		@rm -f $(OBJS)
 
 fclean		:
-		@echo "\033[32m[ex01] Clean\033[0m"
+		@echo "\033[32m[ex02] Clean\033[0m"
 		@rm -f $(OBJS)
 		@rm -f $(NAME)
 

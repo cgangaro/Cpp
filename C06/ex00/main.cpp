@@ -25,8 +25,6 @@ int	main(int argc, char *argv[])
 	if (argc != 2)
 		return 0;
 	std::string s = argv[1];
-	double val;
-	val = atof(s.c_str());
 	std::cout << "char: ";
 	if (!(only_digit(s)) && s.length() != 1)
 	{
@@ -37,11 +35,13 @@ int	main(int argc, char *argv[])
 	}
 	else
 	{
-		if (val >= 32 && val <= 126)
-			std::cout << static_cast<char>(val) << std::endl;
+		if (s[0] >= 32 && s[0] <= 126)
+			std::cout << static_cast<char>(s[0]) << std::endl;
 		else
 			std::cout << "Non displayable" << std::endl;
 	}
+	double val;
+	val = atof(s.c_str());
 	std::cout << "int: ";
 	if (val > 2147483647 || val < -2147483648 || !(only_digit(s)))
 		std::cout << "impossible" << std::endl;
